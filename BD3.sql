@@ -99,7 +99,10 @@ AS
         ERROR_PROCEDURE() AS ErrorProcedure,  
         ERROR_MESSAGE() AS ErrorMessage;  
 GO
---------------------#INGRESO DE DATOS#------------------------------------------
+----------------------------------------------------------------------------------------
+--#INGRESO DE DATOS#
+-----------------------------------------------------------------------------------------
+
 ---PRODUCTOS--------------------------------------------------------------- 
 CREATE PROCEDURE spAgregaProductos
     @idfab AS VARCHAR2(10),
@@ -251,9 +254,13 @@ BEGIN
 
 END 
 GO
+----------------------------------------------------------------------------------------------
+-#ACTUALIZACION DE DATOS#
+----------------------------------------------------------------------------------------------
 
---------------------#ACTUALIZACION DE DATOS#------------------------------------------
+
 ---PRODUCTOS--------------------------------------------------------------- 
+
 CREATE PROCEDURE spActualizaProductos
     @idfab AS VARCHAR2(10),
     @idpro AS VARCHAR2(15),
@@ -261,7 +268,8 @@ CREATE PROCEDURE spActualizaProductos
     @precio AS NUMBER(10),
     @stock AS NUMBER(5),
     @msg AS VARCHAR2(100) OUTPUT
-
+    
+-------------- o --------------
 AS 
 BEGIN
 	SET NOCOUNT ON; 
@@ -283,7 +291,7 @@ BEGIN
 
 END 
 GO
-
+-------------- o --------------
 AS 
 BEGIN
 	SET NOCOUNT ON; 
@@ -305,7 +313,7 @@ BEGIN
 
 END 
 GO
-
+-------------- o --------------
 AS 
 BEGIN
 	SET NOCOUNT ON; 
@@ -326,7 +334,7 @@ BEGIN
 
 END 
 GO
-
+-------------- o --------------
 AS 
 BEGIN
 	SET NOCOUNT ON; 
@@ -347,7 +355,7 @@ BEGIN
 
 END 
 GO
-
+-------------- o --------------
 AS 
 BEGIN
 	SET NOCOUNT ON; 
@@ -370,6 +378,7 @@ END
 GO
 
 ---SUCURSALES--------------------------------------------------------------- 
+
 CREATE PROCEDURE spAgregaSucursales
 	@sucursal as NUMBER(3)
 	@ciudad as VARCHAR2(15)
@@ -378,7 +387,8 @@ CREATE PROCEDURE spAgregaSucursales
 	@obj as VARCHAR2(100)
 	@vent as NUMBER(10)
 	@msg_err as VARCHAR2(100) OUTPUT
-
+	
+-------------- o --------------
 AS 
 BEGIN
 	SET NOCOUNT ON; 
@@ -398,7 +408,7 @@ BEGIN
 
 END 
 GO
-
+-------------- o --------------
 AS 
 BEGIN
 	SET NOCOUNT ON; 
@@ -417,7 +427,7 @@ BEGIN
 
 END 
 GO
-
+-------------- o --------------
 AS 
 BEGIN
 	SET NOCOUNT ON; 
@@ -436,7 +446,7 @@ BEGIN
 
 END 
 GO
-
+-------------- o --------------
 AS 
 BEGIN
 	SET NOCOUNT ON; 
@@ -455,7 +465,7 @@ BEGIN
 
 END 
 GO
-
+-------------- o --------------
 AS 
 BEGIN
 	SET NOCOUNT ON; 
@@ -474,7 +484,7 @@ BEGIN
 
 END 
 GO
-
+-------------- o --------------
 AS 
 BEGIN
 	SET NOCOUNT ON; 
@@ -495,6 +505,7 @@ END
 GO
 
 ---TRABAJADORES--------------------------------------------------------------- 
+
 CREATE PROCEDURE spActualizarTrabajadores
 	@numemp as NUMBER(3)
 	@nom as VARCHAR2(20)
@@ -507,6 +518,7 @@ CREATE PROCEDURE spActualizarTrabajadores
 	@ventas as NUMBER(10)
 	@msg_err as VARCHAR2(100) OUTPUT
 
+-------------- o --------------
 AS 
 BEGIN
 	SET NOCOUNT ON; 
@@ -527,7 +539,7 @@ BEGIN
 
 END 
 GO
-
+-------------- o --------------
 AS 
 BEGIN
 	SET NOCOUNT ON; 
@@ -546,7 +558,7 @@ BEGIN
 
 END 
 GO
-
+-------------- o --------------
 AS 
 BEGIN
 	SET NOCOUNT ON; 
@@ -565,7 +577,7 @@ BEGIN
 
 END 
 GO
-
+-------------- o --------------
 AS 
 BEGIN
 	SET NOCOUNT ON; 
@@ -584,7 +596,7 @@ BEGIN
 
 END 
 GO
-
+-------------- o --------------
 AS 
 BEGIN
 	SET NOCOUNT ON; 
@@ -603,7 +615,7 @@ BEGIN
 
 END 
 GO
-
+-------------- o --------------
 AS 
 BEGIN
 	SET NOCOUNT ON; 
@@ -622,7 +634,7 @@ BEGIN
 
 END 
 GO
-
+-------------- o --------------
 AS 
 BEGIN
 	SET NOCOUNT ON; 
@@ -641,7 +653,7 @@ BEGIN
 
 END 
 GO
-
+-------------- o --------------
 AS 
 BEGIN
 	SET NOCOUNT ON; 
@@ -660,7 +672,7 @@ BEGIN
 
 END 
 GO
-
+-------------- o --------------
 AS 
 BEGIN
 	SET NOCOUNT ON; 
@@ -679,7 +691,7 @@ BEGIN
 
 END 
 GO
-
+-------------- o --------------
 AS 
 BEGIN
 	SET NOCOUNT ON; 
@@ -698,7 +710,7 @@ BEGIN
 
 END 
 GO
-
+-------------- o --------------
 AS 
 BEGIN
 	SET NOCOUNT ON; 
@@ -719,6 +731,7 @@ END
 GO
 
 ---CLIENTES--------------------------------------------------------------- 
+
 CREATE PROCEDURE spActualizarClientes
 	@numclie as NUMBER(4)
 	@nom as VARCHAR2(20)
@@ -726,6 +739,7 @@ CREATE PROCEDURE spActualizarClientes
 	@credito as VARCHAR2(2)
 	@msg_err as VARCHAR2(100) OUTPUT
 
+-------------- o --------------
 AS 
 BEGIN
 	SET NOCOUNT ON; 
@@ -745,7 +759,7 @@ BEGIN
 
 END 
 GO
-
+-------------- o --------------
 AS 
 BEGIN
 	SET NOCOUNT ON; 
@@ -764,7 +778,7 @@ BEGIN
 
 END 
 GO
-
+-------------- o --------------
 AS 
 BEGIN
 	SET NOCOUNT ON; 
@@ -783,7 +797,7 @@ BEGIN
 
 END 
 GO
-
+-------------- o --------------
 AS 
 BEGIN
 	SET NOCOUNT ON; 
@@ -804,6 +818,7 @@ END
 GO
 
 ---PEDIDOS--------------------------------------------------------------- 
+
 CREATE PROCEDURE spActualizarPedidos
 	@cod as NUMBER(3)
 	@num as NUMBER(9)
@@ -815,6 +830,7 @@ CREATE PROCEDURE spActualizarPedidos
 	@cant as NUMBER(4)
 	@msg_err as VARCHAR2(100) OUTPUT
 
+-------------- o --------------
 AS 
 BEGIN
 	SET NOCOUNT ON; 
@@ -833,7 +849,7 @@ BEGIN
 
 END 
 GO
-
+-------------- o --------------
 AS 
 BEGIN
 	SET NOCOUNT ON; 
@@ -852,7 +868,7 @@ BEGIN
 
 END 
 GO
-
+-------------- o --------------
 AS 
 BEGIN
 	SET NOCOUNT ON; 
@@ -871,7 +887,7 @@ BEGIN
 
 END 
 GO
-
+-------------- o --------------
 AS 
 BEGIN
 	SET NOCOUNT ON; 
@@ -890,7 +906,7 @@ BEGIN
 
 END 
 GO
-
+-------------- o --------------
 AS 
 BEGIN
 	SET NOCOUNT ON; 
@@ -909,7 +925,7 @@ BEGIN
 
 END 
 GO
-
+-------------- o --------------
 AS 
 BEGIN
 	SET NOCOUNT ON; 
@@ -929,9 +945,12 @@ BEGIN
 END 
 GO
  
+------------------------------------------------------------------------------------
+--#BORRADO DE DATOS#
+------------------------------------------------------------------------------------
 
---------------------#BORRADO DE DATOS#------------------------------------------
 --------PRODUCTOS--------------------------------------------------------------- 
+
 ----IDFAB--------------------
 #no se puede borrar ya que es una llave primaria 
 ----IDPRODUCTO---------------
@@ -1020,6 +1039,7 @@ END;
 GO 
 
 ---SUCURSALES---------------------------------------------------------------
+
 CREATE PROCEDURE spBorrarSucursales
 	@sucursal as NUMBER(3)
 	@ciudad as VARCHAR2(15)
