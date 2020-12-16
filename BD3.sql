@@ -1562,7 +1562,20 @@ BEGIN
 	END CATCH
 END; 
 GO
-
+---------------------------------------------------------------------------------------------------------
+--IMPLEMENTACIÓN DE CICLOS 
+---------------------------------------------------------------------------------------------------------
+--CICLO DE VARRAY Y OBJ
+DECLARE 
+	TYPE dbObj_vry IS VARRAY (5) OF NUMBER;
+BEGIN
+	CASE dbObj_vry 
+	WHEN "" THEN
+	SELECT tabl.DIA_ELAVORACION, vry.column_value FROM PRODUCTOS tabl, TABLE (tabl,DIA_ELAVORACION) vry;
+	WHERE DIA_ELAVORACION; 
+	THEN 
+END CASE; 
+END; 
 ---------------------------------------------------------------------------------------------------------
 --TABLA DEL TRIGGER
 ---------------------------------------------------------------------------------------------------------
