@@ -99,6 +99,26 @@ AS
         ERROR_PROCEDURE() AS ErrorProcedure,  
         ERROR_MESSAGE() AS ErrorMessage;  
 GO
+
+----------------------------------------------------------------------------------------
+CURSOR 
+----------------------------------------------------------------------------------------
+CREATE OR REPLACE PROCEDURE pedidos (depart PEDIDOS.NUMPEDIDO%TYPE)
+IS
+    CURSOR selector IS SELECT * FROM PEDIDOS WHERE NUMPEDIDO = 45;
+    selector  PEDIDOS%ROWTIPE
+BEGIN
+    OPEN selector;
+    FETCH selector INTO fila;
+    WHILE selector%FOUND LOOP
+        DBMS_OUTPUT.PUT_LINE(fila.IDPRODUCTO);
+        FETCH selector INTO fila;
+        EXIT WHEN selector%NOTFOUND;
+    END LOOP;
+    CLOSE selector;
+END;
+
+
 ----------------------------------------------------------------------------------------
 --#INGRESO DE DATOS#
 -----------------------------------------------------------------------------------------
